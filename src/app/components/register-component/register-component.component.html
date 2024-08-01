@@ -1,0 +1,56 @@
+<div class="bootstarp-wrapper">
+    <div class="container mtt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <span style="color:blue;font-size: 20px;">Register User</span><br><br>
+                    <!-- creating form -->
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                        <mat-form-field class="full-width">
+                            <mat-label>Email</mat-label>
+                            <input required type="text" [(ngModel)]="user.email" #email="ngModel" name="email"
+                                placeholder="Enter Email" matInput />                              
+                       </mat-form-field>
+                       <div *ngIf="email.touched && email.dirty">
+                        <div *ngIf="email.errors?.['required']">
+                            <P style="text-align: left; color:  red;">Email cant be empty</P>
+                        </div>
+                    </div>
+                        <mat-form-field class="full-width">
+                            <mat-label>Password</mat-label>
+                            <input required type="text" name="password" [(ngModel)]="user.password" #password="ngModel"
+                                placeholder="Enter Password" matInput />
+                        </mat-form-field>
+                        <div *ngIf="email.touched && email.dirty">
+                            <div *ngIf="password.errors?.['required']">
+                                <P style="text-align: left; color:  red;">Password cant be empty</P>
+                            </div>
+                        </div>
+                        <mat-form-field class="full-width">
+                            <mat-label>Phone</mat-label>
+                            <input required type="text" [(ngModel)]="user.phone" #phone="ngModel" pattern="[0-9]{10}" placeholder="Enter Phone Details" 
+                                name="phone" matInput />
+                        </mat-form-field>
+                        <div *ngIf="phone.touched && phone.dirty">
+                            <div *ngIf="phone.errors?.['required']">
+                               <P style="text-align: left; color:  red;">Pone cant be empty</P> Ph
+                            </div>
+                            <div *ngIf="phone.errors?.['pattern']">
+                              <P style="text-align: left; color:  red;">Number shoul have 10 digits</P>  
+                            </div>
+                        </div>
+                        <mat-form-field class="full-width">
+                            <mat-label>Age</mat-label>
+                            <input required type="text" [(ngModel)]="user.age" #age="ngModel"  placeholder="Enter Age"
+                                name="age" matInput />
+                        </mat-form-field>
+                        <div style="margin-bottom: 2%;" class="container text-center">
+                            <button type="submit" [disabled]="f.invalid" mat-raised-button color="primary">Submit</button>
+                            <button type="reset" style="margin-left: 10px;" mat-raised-button
+                                color="warn">Reset</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

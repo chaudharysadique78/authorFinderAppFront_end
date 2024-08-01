@@ -1,0 +1,8 @@
+.home{
+    background-image:
+        url('/assets/author.png');
+    background-size: cover;
+    background-color: bisque;
+    height: 85%;
+    width: 100%; 
+}

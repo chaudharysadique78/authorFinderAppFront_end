@@ -1,0 +1,14 @@
+.spacer{
+    flex: 1 1 auto;
+}
+  
+ a {
+    margin-left: 16px; /* Space between links */
+    color: inherit;    /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+  }
+
+.mat-toolbar {
+    background: rebeccapurple; /* Set the toolbar background color */
+    color: white;        /* Set the text color */
+  }

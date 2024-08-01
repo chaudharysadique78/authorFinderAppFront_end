@@ -1,0 +1,9 @@
+.dashboard{
+    background-color: floralwhite;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.dashboard button{
+    margin: 5px;
+}

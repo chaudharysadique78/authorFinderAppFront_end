@@ -1,0 +1,27 @@
+<div class="bootstarp-wrapper">
+    <div class="container text-center mtt">
+        <span style="color:blue;font-size: 30px;">Authors</span><br>
+        <div style="margin: 2%;">
+            <table class="table">
+                <thead>
+                    <tr style="font-weight: bold;" >
+                        <td scope="col">Author Name</td>
+                        <td scope="col">Bio</td>
+                        <td scope="col">Books</td>
+                        <td scope="col">Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of authors; index as i">
+                        <td>{{u.name}}</td>
+                        <td>{{u.bio}}</td>
+                        <td>{{u.books}}</td>
+                        <td>                          
+                           <button (click)="addFav(u.id)" mat-raised-button color="warn">Add Favourite</button>  
+                           <!-- <button mat-raised-button color="accent">Update</button></td>                                                                   -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

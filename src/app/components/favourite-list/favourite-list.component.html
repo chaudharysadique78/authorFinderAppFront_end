@@ -1,0 +1,26 @@
+<div class="bootstarp-wrapper">
+    <div class="container text-center mtt">
+        <span style="color:blue;font-size: 30px;">Favourite Authors</span><br>
+        <div *ngIf="msg" class="alert alert-danger" role="alert">
+            {{msg}}
+          </div>
+        <div style="margin: 2%;">
+            <table class="table">
+                <thead>
+                    <tr style="font-weight: bold;" >
+                        <td scope="col">Author Name</td>
+                        <td scope="col">Bio</td>
+                        <td scope="col">Books</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of authors; index as i">
+                        <td>{{u.name}}</td>
+                        <td>{{u.bio}}</td>
+                        <td>{{u.books}}</td>                                                                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

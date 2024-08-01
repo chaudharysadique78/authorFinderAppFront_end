@@ -1,0 +1,31 @@
+<div class="bootstarp-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img class="img-fluid" style="width: 120px;" src="/assets/login.png">
+                </div>
+                <h1 class="text-center"> Login Here</h1>
+                <br>
+                <div *ngIf="msg" class="alert alert-danger" role="alert">
+                    {{msg}}
+                  </div>
+                <!-- creating form -->
+                <form (ngSubmit)="onSubmit()">
+                    <mat-form-field class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input required [(ngModel)]="credentials.email" placeholder="Enter Email" type="text" name="email" matInput />
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input required [(ngModel)]="credentials.password" placeholder="Enter Password"  type="password" name="password" matInput />
+                    </mat-form-field>
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Submit</button>
+                        <button type="reset" style="margin-left: 10px;" mat-raised-button color="warn">Reset</button>                   
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
